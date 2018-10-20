@@ -1,7 +1,17 @@
 #Project Description 
 
-S.W.I.F.T is a NPO focusing on removing barriers for students seeking higher education 
+S.W.I.F.T is a NPO focusing on removing barriers for students seeking higher education. Their system currenly utilizes Remind to notify volunteers on events and opportunities, they would like a system that allows for tracking statistics of volunteers and generate reports. 
 
+Target Audience: Teenagers (ages 14-18)
+
+## Project Needs
+- Track volunteer hours
+- Track communication for volunteers (Text messages, emails, etc.)
+- Notifications must have user preferences
+
+### Project Wants
+- Input data on graduation year for students
+- School name of students
 
 
 
