@@ -1,3 +1,9 @@
+#Project Description 
+
+S.W.I.F.T is a NPO focusing on removing barriers for students seeking higher education 
+
+
+
 
 ## Firebase Script
 Copy and paste the snippet below at the bottom of your HTML, before other script tags.
@@ -15,3 +21,6 @@ Copy and paste the snippet below at the bottom of your HTML, before other script
   };
   firebase.initializeApp(config);
 </script>```
+
+
+#Project Description 
