@@ -1,7 +1,7 @@
 (function() {
 	$(document).ready(function() {
 		init_api();
-		
+
 		if(window.api.auth.checkLevel() < api.constants.ADMINISTRATOR) {
 			alert("You need to log in to access this page!");
 			window.location = "/";
@@ -31,7 +31,7 @@
 			let phone = enl($("#create-modify-usr #phone").val());
 			let auth = enn($("#create-modify-usr #auth").val());
 
-			window.api.auth.modifyUser({
+			ret = window.api.auth.modifyUser({
 				username: username,
 				password: password,
 				first_name: fname,
@@ -40,6 +40,13 @@
 				email: email,
 				authorization: auth
 			});
+
+			if(ret == window.api.constants.NEW_USER)
+				ret = "New user created!";
+			else if(ret == window.api.constants.MOD_USER)
+				ret = "User modified successfully";
+
+			$("#create-modify-usr #output").text(ret);
 		};
 	});
 })();
