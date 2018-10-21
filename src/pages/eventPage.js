@@ -6,6 +6,7 @@ api();
 
 let events = window.api.events.getEvents('',null,null);
 let eventComponents = events.map((val,i,arr) =>  {
+
  return(
      <Event
          id={val.id}
