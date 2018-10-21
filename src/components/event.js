@@ -10,7 +10,6 @@ class event extends Component {
         <p>
           <Icon type="environment" theme="outlined" /> {location}
         </p>
-
         <p>
           <Icon type="clock-circle" theme="outlined" /> {hours} Hours
         </p>
