@@ -23,8 +23,8 @@ class navBar extends Component {
             <Link to="/login">Login</Link>
           </Menu.Item>
             {/* Admin eyes only */}
-          <Menu.Item onclick=''>
-              Export Volunteers to .CSV
+          <Menu.Item key={"5"}>
+              <Link to="/export">Export Volunteers to .CSV</Link>
           </Menu.Item>
         </Menu>
       </Header>

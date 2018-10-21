@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, Card } from 'antd'
+import {Icon, Card, Button} from 'antd'
 
 class event extends Component {
   render() {
@@ -16,6 +16,7 @@ class event extends Component {
         <p>
           <Icon type="team" theme="outlined" /> {needed} Volunteers Needed
         </p>
+          <Button type="primary" ghost>Join event</Button>
       </Card>
     )
   }

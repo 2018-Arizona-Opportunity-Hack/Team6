@@ -57,12 +57,12 @@ export default function init_api() {
             {
                 event_id: null,
                 name: "Test event 0",
-                description: "A test event, event number zero! This is the description!",
+                description: "A test event 2 Hi my name is Jake, event number zero! This is the description!",
                 author: "yash101",
-                from: new Date(2018, 10, 24, 12, 0, 0),
+                from: new Date(2018, 10, 28, 12, 0, 0),
                 to: new Date(2018, 10, 25, 20, 0, 0),
                 categories: ["test"],
-                hours_needed: 10,
+                hours_needed: 5,
                 location: "Tempe",
                 volunteers: [
                     {
@@ -74,12 +74,12 @@ export default function init_api() {
             {
                 event_id: null,
                 name: "TestTest123",
-                description: "A test event, event number zero! This is the description!",
+                description: "A test event, event number zero! ffffffescdfgfdsklsdrfiouadfujihesdhuijaFSDJHBkswdgiuhffjhkewusbhjbwe This is the description!",
                 author: "yash101",
                 from: new Date(2018, 10, 24, 12, 0, 0),
                 to: new Date(2018, 10, 25, 20, 0, 0),
                 categories: ["test"],
-                hours_needed: 10,
+                hours_needed: 2,
                 location: "Tempe",
                 volunteers: [
                     {
