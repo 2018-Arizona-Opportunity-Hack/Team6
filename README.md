@@ -38,8 +38,5 @@ Copy and paste the snippet below at the bottom of your HTML, before other script
 </script>
 ```
 
-
-# Project Description 
-
 ## Deployed to:
 `https://opportunity-hack-ea7d5.firebaseapp.com`
