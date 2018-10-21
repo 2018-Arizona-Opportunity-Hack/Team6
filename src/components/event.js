@@ -5,7 +5,7 @@ class event extends Component {
   render() {
     let { id, categories, volunteers, name, time, location, description, hours, needed } = this.props
     return (
-      <Card title={name} style={{ width: 300 }}>
+      <Card title={name}>
         <p>{description}</p>
         <p>
           <Icon type="environment" theme="outlined" /> {location}

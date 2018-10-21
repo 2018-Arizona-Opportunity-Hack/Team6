@@ -47,6 +47,19 @@ class eventPage extends Component {
               needed={eventObj.needed + ' 2'}
             />
           </Col>
+          <Col span={8}>
+            <Event
+              id={eventObj.id + ' 3'}
+              categories={eventObj.categories + ' 3'}
+              volunteers={eventObj.volunteers + ' 3'}
+              name={eventObj.name + ' 3'}
+              time={eventObj.time + ' 3'}
+              location={eventObj.location + ' 3'}
+              description={eventObj.description + ' 3'}
+              hours={eventObj.hours + ' 3'}
+              needed={eventObj.needed + ' 3'}
+            />
+          </Col>
         </Row>
       </div>
     )
