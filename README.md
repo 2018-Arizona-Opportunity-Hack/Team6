@@ -22,7 +22,8 @@ Target Audience: Teenagers (ages 14-18)
 ## Firebase Script
 Copy and paste the snippet below at the bottom of your HTML, before other script tags.
 
-```<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+```
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -34,10 +35,11 @@ Copy and paste the snippet below at the bottom of your HTML, before other script
     messagingSenderId: "272025491458"
   };
   firebase.initializeApp(config);
-</script>```
+</script>
+```
 
 
-#Project Description 
+# Project Description 
 
 ## Deployed to:
 `https://opportunity-hack-ea7d5.firebaseapp.com`
