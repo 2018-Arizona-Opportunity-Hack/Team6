@@ -4,16 +4,29 @@ body {
 
 #container {
 	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 #container > * {
 	display: inline-block;
 	min-width: 300px;
 	min-height: 300px;
-	max-height: 800px;
 	max-width: 100%;
 	background-color: white;
 	padding: 32px;
+	margin: 32px;
+}
+
+#container input {
+	width: 100%;
+	padding: 8px;
+	font-size: 1.2rem;
+	box-sizing: border-box;
+}
+
+#container #create-modify-usr th {
+	font-size: 1.2rem;
 }
 
 #user-panel > table > * > * > * {

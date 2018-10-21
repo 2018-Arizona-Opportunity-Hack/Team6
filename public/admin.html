@@ -20,7 +20,7 @@
 
 	<body>
 		<a href="/">&leftarrow; Back Home</a>
-		<h1>Volunteerinator 9000+ | Administrative Panel</h1>
+		<h1 style="text-align: center;">Volunteerinator 9000+ | Administrative Panel</h1>
 
 		<div id="container">
 
@@ -39,6 +39,49 @@
 						<th>Edit</th>
 					</tr>
 				</table>
+			</div>
+
+			<!-- Create/Modify User -->
+			<div id="create-modify-usr">
+				<form action="javascript:window.api.acall.createModifyUser();">
+					<h2>Create/Modify User</h2>
+					<table>
+						<tr>
+							<th>Username</th>
+							<td><input type="text" placeholder="Username" id="username"></td>
+						</tr>
+						<tr>
+							<th>Password</th>
+							<td><input type="password" placeholder="Password" id="password"></td>
+						</tr>
+						<tr>
+							<th>First Name</th>
+							<td><input type="text" placeholder="First Name" id="fname"></td>
+						</tr>
+						<tr>
+							<th>Last Name</th>
+							<td><input type="text" placeholder="Last Name" id="lname"></td>
+						</tr>
+						<tr>
+							<th>Email</th>
+							<td><input type="email" placeholder="Email Address" id="email"></td>
+						</tr>
+						<tr>
+							<th>Phone No.</th>
+							<td><input type="phone" placeholder="Phone Number" id="phone"></td>
+						</tr>
+						<tr>
+							<th>Clearance</th>
+							<td><input type="number" min=-1 max=2 placeholder="User Clearance" value=-1 id="auth"></td>
+						</tr>
+						<tr>
+							<td colspan=2><input type="submit" value="Go!"></td>
+						</tr>
+						<tr>
+							<td colspan=2 id="output"></td>
+						</tr>
+					</table>
+				</form>
 			</div>
 
 		</div>
