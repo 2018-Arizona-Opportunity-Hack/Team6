@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Event from '../components/event.js'
-import { Row, Col } from 'antd'
+import { Row, Col, Button } from 'antd'
 import api from '../api.js'
 api();
 
@@ -28,6 +28,7 @@ class eventPage extends Component {
         <Row gutter={16}>
           <Col span={8}>
               {eventComponents }
+
           </Col>
         </Row>
       </div>
