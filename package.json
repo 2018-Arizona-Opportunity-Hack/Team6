@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.10.1",
     "firebase": "^5.5.5",
     "firebaseui": "^3.4.1",
     "loadjs": "^3.5.4",
