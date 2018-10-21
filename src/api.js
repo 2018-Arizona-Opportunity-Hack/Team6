@@ -247,10 +247,10 @@ export default function init_api() {
     };
 
     api.database.getUsers = function(regex) {
-        users = [];
-        f = new RegExp(regex, 'i');
+        var users = [];
+        var f = new RegExp(regex, 'i');
         for(var u in internalData.users) {
-            if(u.username.match(regex) || u.first_name.match(regex) || u.last_name.match(regex) || (u.first_name + ' ' + u.last_name).match(regex))
+            if(u.username.match(regex))
                 users.push(u);
         }
 

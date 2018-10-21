@@ -6,11 +6,15 @@ body {
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	padding: 64px;
+	width: 100%;
+	box-sizing: border-box;
+	flex-wrap: wrap;
 }
 
 #container > * {
 	display: inline-block;
-	min-width: 300px;
+	min-width: 400px;
 	min-height: 300px;
 	max-width: 100%;
 	background-color: white;
@@ -18,7 +22,12 @@ body {
 	margin: 32px;
 }
 
-#container input {
+#container table {
+	width: 100%;
+}
+
+#container input,
+#container button {
 	width: 100%;
 	padding: 8px;
 	font-size: 1.2rem;
