@@ -15,8 +15,7 @@ let eventComponents = events.map((val,i,arr) =>  {
          time={val.time}
          location={val.location}
          description={val.description}
-         hours={val.hours}
-         needed={val.needed}
+         hours={val.hours_needed}
      />
  )
 });
