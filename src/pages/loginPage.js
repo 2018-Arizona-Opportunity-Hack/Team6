@@ -35,7 +35,7 @@ class loginPage extends Component {
             window.api.auth.logIn(username,password);
             if (window.api.auth.logIn(username,password))
             {
-               window.api.checkLevel(username, password);
+               window.api.checkLevel();s
             }
             this.props.history.push('/homePage.js');
         }
