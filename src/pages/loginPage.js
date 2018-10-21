@@ -32,7 +32,11 @@ class loginPage extends Component {
         else{
             var password = this.state.password;
             var username = this.state.username;
-            console.log(window.api.auth.logIn(username,password));
+            window.api.auth.logIn(username,password);
+            if (window.api.auth.logIn(username,password))
+            {
+               window.api.checkLevel(username, password);
+            }
             this.props.history.push('/homePage.js');
         }
         if (!this.state.password) {
@@ -58,6 +62,7 @@ class loginPage extends Component {
                 {
                     this.state.error && <h3 data-test="error" onClick={this.dismissError}>
                         <button onClick={this.dismissError}>X</button>
+
                         {this.state.error}
                     </h3>
                 }
