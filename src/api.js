@@ -68,6 +68,12 @@ export default function init_api() {
 						username: "jacob",
 						hours: 5
 					}
+				],
+				notifications: [
+					{
+						message: "hello world",
+						time: new Date(2018, 10, 23, 12, 0, 0)
+					}
 				]
 			},
 			{
@@ -84,6 +90,12 @@ export default function init_api() {
 						username: "jacob",
 						hours: 5
 					}
+				],
+				notifications: [
+					{
+						message: "hello world",
+						time: new Date(2018, 10, 23, 12, 0, 0)
+					}
 				]
 			},
 			{
@@ -99,6 +111,12 @@ export default function init_api() {
 					{
 						username: "jacob",
 						hours: 5
+					}
+				],
+				notifications: [
+					{
+						message: "hello world",
+						time: new Date(2018, 10, 23, 12, 0, 0)
 					}
 				]
 			}
@@ -142,6 +160,21 @@ export default function init_api() {
 		}
 
 		return internalData.users[internalData.currentUser].authorization;
+	};
+
+	/*
+	*/
+	api.auth.getUsers = function(regex) {
+		let reg = new RegExp(regex, "i");
+		let ret = [];
+
+		for(var i in internalData.users) {
+			if(internalData.users[i].username.match(regex)) {
+				ret.push(internalData.users[i]);
+			}
+		}
+
+		return ret;
 	};
 
 	/*
@@ -225,10 +258,10 @@ export default function init_api() {
 		let ret = [];
 		let eventsList = internalData.events;
 
+		let s = new RegExp(search, "i");
 		for(var i = 0; i < eventsList.length; i++) {
-			let s = new RegExp(search, "i");
 
-			if(eventsList[i].name.match(s) &&
+			if((eventsList[i].name.match(s) || eventsList[i].description.match(s) || eventsList[i].author.match(s)) &&
 				(!from || eventsList[i].from >= from) &&
 				(!to || eventsList[i] <= eventsList[i].to)) {
 				ret.push(eventsList[i]);
@@ -239,8 +272,49 @@ export default function init_api() {
 		return ret;
 	};
 
-	api.events.updateEvent = function(eid) {
+	api.events.getNewEventId = function() {
+		var max = 100;
+		for(var i = 0; i < internalData.eventsList.length; i++) {
+			if(internalData.eventsList[i].event_id > max)
+				max = internalData.eventsList[i].event_id;
+		}
+
+		return max + 1;
+	};
+
+	api.events.updateEvent = function(eid, event) {
+		// Find the event by the eid
+		var evt = null;
+		for(var i = 0; i < internalData.eventsList.length; i++) {
+			if(internalData.eventsList[i].event_id == eid) {
+				evt = internalData.eventsList[i];
+				break;
+			}
+		}
+		// New event
+		if(!evt) {
+			if(!event.name) return "Error: no name";
+			if(!event.from || typeof event.from != typeof new Date()) return "Error: no beginning time";
+
+
+			internalData.eventsList.push({
+				event_id: api.events.getNewEventId(),
+				name: event.name,
+				description: event.description || "",
+				author: internalData.currentUser,
+				from: event.from,
+				to: event.to,
+				categories: event.categories || [],
+				hours_needed: event.hours_needed || 0,
+				volunteers: event.volunteers || []
+			});
+		}
+
 		api.database.saveDatabase();
+	};
+
+	api.events.getVolunteers = function(evt_id) {
+
 	};
 
 	api.database.importCSV = function(csv_data) {
