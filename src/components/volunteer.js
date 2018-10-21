@@ -12,7 +12,7 @@ class event extends Component {
 
     render() {
         let { id, events, email, phone, firstName, lastName, categories}= this.props;
-        /*
+        /*i
         if (this.state.editmode)
         {
             then do the same thing but with tex
@@ -28,7 +28,7 @@ class event extends Component {
                 <Input type="text" value={email}prefix={<Icon type="mail" theme="outlined"/>}/>
                 <Button type="primary" icon="check">Save</Button>
             </Card>
-         )
+         );
 
         return (
             <Card title= "Volunteer">

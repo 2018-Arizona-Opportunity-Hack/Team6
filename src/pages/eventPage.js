@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Event from '../components/event.js'
 import { Row, Col } from 'antd'
+import api from '../api.js'
 
 let eventObj = {
   id: 1,
@@ -14,6 +15,7 @@ let eventObj = {
   hours: 24,
   needed: 200
 }
+
 
 class eventPage extends Component {
   render() {

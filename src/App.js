@@ -6,8 +6,11 @@ import HomePage from '../src/pages/homePage.js'
 import EventPage from '../src/pages/eventPage'
 import LoginPage from '../src/pages/loginPage.js'
 import VolunteerPage from '../src/pages/volunteerPage.js'
+import api from './api.js'
 import { Layout } from 'antd'
 const { Content, Footer } = Layout
+
+api();
 
 class App extends Component {
   render() {
@@ -21,7 +24,8 @@ class App extends Component {
                 <Route path="/home" component={HomePage} />
                 <Route path="/events" component={EventPage} />
                 <Route path="/volunteers" component={VolunteerPage} />
-                <Route path="/login" component={LoginPage} />
+                <Route path="/login" component={LoginPage
+                } />
               </Switch>
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
