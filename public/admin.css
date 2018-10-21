@@ -1,0 +1,22 @@
+body {
+	background-color: #C6C6C6;
+}
+
+#container {
+	text-align: center;
+}
+
+#container > * {
+	display: inline-block;
+	min-width: 300px;
+	min-height: 300px;
+	max-height: 800px;
+	max-width: 100%;
+	background-color: white;
+	padding: 32px;
+}
+
+#user-panel > table > * > * > * {
+	border: 1px solid #404040;
+	margin: 0px;
+}
