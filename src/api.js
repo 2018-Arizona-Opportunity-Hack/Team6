@@ -246,6 +246,17 @@ export default function init_api() {
         api.database.saveDatabase();
     };
 
+    api.database.getUsers = function(regex) {
+        users = [];
+        f = new RegExp(regex, 'i');
+        for(var u in internalData.users) {
+            if(u.username.match(regex) || u.first_name.match(regex) || u.last_name.match(regex) || (u.first_name + ' ' + u.last_name).match(regex))
+                users.push(u);
+        }
+
+        return users;
+    };
+
     api.database.importCSV = function(csv_data) {
 
     };
