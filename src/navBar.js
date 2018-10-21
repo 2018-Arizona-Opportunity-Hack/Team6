@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Layout, Menu, Breadcrumb } from 'antd'
+import { Layout, Menu } from 'antd'
 import { Link } from 'react-router-dom'
-const { Header, Content, Footer } = Layout
+const { Header } = Layout
 
 class navBar extends Component {
   render() {
