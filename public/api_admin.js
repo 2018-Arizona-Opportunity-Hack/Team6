@@ -198,7 +198,7 @@ function init_api() {
                 authorization: curUser.authorization
             };
 
-            if(currentLevel >= api.constants.ADMINISTRATOR && user.authorization !== undefined) {
+            if(currentLevel >= api.constants.ADMINISTRATOR && user.authorization !== undefined && user.authorization !== null) {
                 curUser.authorization = user.authorization;
             } else if(currentLevel < api.constants.ADMINISTRATOR) {
                 return "Error: permission to change user permission denied!";
