@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import Volunteer from '../components/volunteer.js'
-import { Col, Row, Card } from 'antd'
+import { Col, Row} from 'antd'
 
-const gridStyle = {
-  width: '25%',
-  textAlign: 'center'
-}
 
 let volunteerObj = {
   id: 1,

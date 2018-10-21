@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import {DatePicker,Button, Radio, Icon} from 'antd';
+import {DatePicker,Button} from 'antd';
 import '../export.js';
 
-const{MonthPicker,RangePicker,WeekPicker} = DatePicker;
+const{RangePicker} = DatePicker;
 
 function getDate(){
-
-    RangePicker.valueOf()
-
+    RangePicker.valueOf();
 }
 class exportPage extends Component {
     render() {

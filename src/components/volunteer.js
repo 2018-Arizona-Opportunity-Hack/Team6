@@ -13,7 +13,7 @@ class event extends Component {
 
 
   render() {
-    let { email, phone, firstName, lastName } = this.state
+    let { email, phone, firstName, lastName } = this.state;
     if (this.state.edit) {
       return (
         <Card onChange={this.handleInputChange}>
