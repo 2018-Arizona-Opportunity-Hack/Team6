@@ -62,7 +62,7 @@ class Firebase extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to My Awesome App</h1>
+        <h1>Swift Volunteer</h1>
         <div id="firebaseui-auth-container" />
         <div id="loader">Loading...</div>
       </div>
