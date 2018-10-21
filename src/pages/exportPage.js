@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {DatePicker,Button, Radio, Icon} from 'antd';
-import '../src/export.js';
+import '../export.js';
 
 const{MonthPicker,RangePicker,WeekPicker} = DatePicker;
 
