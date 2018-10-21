@@ -63,6 +63,7 @@ export default function init_api() {
                 to: new Date(2018, 10, 25, 20, 0, 0),
                 categories: ["test"],
                 hours_needed: 10,
+                location: "Tempe",
                 volunteers: [
                     {
                         username: "jacob",
@@ -79,6 +80,7 @@ export default function init_api() {
                 to: new Date(2018, 10, 25, 20, 0, 0),
                 categories: ["test"],
                 hours_needed: 10,
+                location: "Tempe",
                 volunteers: [
                     {
                         username: "jacob",
@@ -95,6 +97,7 @@ export default function init_api() {
                 to: new Date(2018, 10, 25, 20, 0, 0),
                 categories: ["test"],
                 hours_needed: 10,
+                location: "Tempe",
                 volunteers: [
                     {
                         username: "jacob",
