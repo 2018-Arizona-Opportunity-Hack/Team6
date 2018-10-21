@@ -24,6 +24,10 @@ S.W.I.F.T is a Non-Profit Organization aiding underrepresented students, their m
 
 - Sign up
 - Login
+- Home
+- Events
+- Volunteers
+- Export Volunteers
 
 
 ## Firebase Script
