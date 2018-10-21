@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import homePage from './pages/homePage.js'
 import './App.css'
 import NavBar from './navBar.js'
+import HomePage from '../src/pages/homePage.js'
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Switch>
-            <Route path="/home" component={homePage} />
+            <Route path="/home" component={HomePage} />
           </Switch>
         </div>
       </BrowserRouter>
