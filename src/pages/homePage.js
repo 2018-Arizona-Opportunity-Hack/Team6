@@ -4,12 +4,10 @@ class homePage extends Component {
     return (
         <html>
         <header className='homeHeader'>
-        <h1>Welcome volunteers!</h1>
-        <h2>To swift!</h2>
+            <div>
+        <h1 className="headerText">Welcome volunteers!</h1>
+            </div>
         </header>
-        <body className="homeBody">
-        Welcome volunteers
-        </body>
         </html>
   )
   }

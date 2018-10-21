@@ -8,6 +8,7 @@ import LoginPage from '../src/pages/loginPage.js'
 import VolunteerPage from '../src/pages/volunteerPage.js'
 import api from './api.js'
 import { Layout } from 'antd'
+import exportPage from "./pages/exportPage";
 const { Content, Footer } = Layout
 
 api();
@@ -26,6 +27,7 @@ class App extends Component {
                 <Route path="/volunteers" component={VolunteerPage} />
                 <Route path="/login" component={LoginPage
                 } />
+                <Route path ="/export" component={exportPage}/>
               </Switch>
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>

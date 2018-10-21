@@ -3,7 +3,7 @@ import { Icon, Card } from 'antd'
 
 class event extends Component {
   render() {
-    let { id, categories, volunteers, name, time, location, description, hours, needed } = this.props
+    let {categories, description, volunteers, name, time, location, hours, needed } = this.props;
     return (
       <Card title={name}>
         <p>{description}</p>

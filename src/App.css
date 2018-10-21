@@ -9,6 +9,14 @@
   height: 40vmin;
 }
 
+.headerText{
+color: white;
+  font-size: 18pt;
+}
+.subHeaderText{
+  color: white;
+  font-size: 16pt;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,15 +27,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 html{
   justify-content: center;
 }
 
+
 .homeHeader{
-    height: 700px;
+    height: 1000px;
     width:100%;
     background-size: cover;
-    background: url("img/benjamin-voros-575800-unsplash.jpg") no-repeat;
+    background-image: url("img/benjamin-voros-575800-unsplash.jpg");
+    background-repeat: no-repeat;
 }
 
 .App-link {

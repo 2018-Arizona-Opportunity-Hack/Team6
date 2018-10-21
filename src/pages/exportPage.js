@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
-import { Form, Row,RangePicker, Button, DatePicker, Radio, Icon} from 'antd';
+import {DatePicker,Button, Radio, Icon} from 'antd';
 import '../src/export.js';
 
+const{MonthPicker,RangePicker,WeekPicker} = DatePicker;
+
+function getDate(){
+
+    RangePicker.valueOf()
+
+}
 class exportPage extends Component {
     render() {
         return (
             <div>
-                <RangePicker onChange={onChange} />
-                <Button type="primary" onClick={exportCSV}>Export to .CSV</Button>
+                <RangePicker onChange={getDate} />
+                <Button type="primary" onClick={''}>Export to .CSV</Button>
             </div>
         )
     }

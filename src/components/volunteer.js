@@ -9,7 +9,7 @@ class event extends Component {
     lastName: '',
     phone: '',
     email: ''
-  }
+  };
 
 
   render() {
