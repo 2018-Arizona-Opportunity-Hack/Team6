@@ -19,6 +19,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+html{
+  justify-content: center;
+}
+
+.homeHeader{
+    height: 700px;
+    width:100%;
+    background-size: cover;
+    background: url("img/benjamin-voros-575800-unsplash.jpg") no-repeat;
+}
 
 .App-link {
   color: #61dafb;
