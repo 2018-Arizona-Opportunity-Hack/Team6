@@ -1,52 +1,71 @@
 import React, { Component } from 'react'
 import { Icon, Card } from 'antd'
-import { Form, Input, Checkbox, Button, AutoComplete } from 'antd';
+import { Input, Button } from 'antd'
 
 class event extends Component {
-    state={
-        firstName: '',
-        lastName: '',
-        phone: '',
-        email: ''
+  state = {
+    edit: false,
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: ''
+  }
+
+  componentDidMount() {
+    let { email, phone, firstName, lastName } = this.props
+    this.setState({
+      firstName,
+      lastName,
+      phone,
+      email
+    })
+  }
+
+  handleInputChange = e => {
+    this.setState({ [e.target.dataset.name]: e.target.value })
+  }
+
+  render() {
+    let { email, phone, firstName, lastName } = this.state
+    if (this.state.edit) {
+      return (
+        <Card onChange={this.handleInputChange}>
+          <Input type="text" value={firstName} data-name="firstName" prefix={<Icon type="user" theme="outlined" />} />
+          <Input type="text" value={lastName} data-name="lastName" prefix={<Icon type="user" theme="outlined" />} />
+          <Input type="text" value={phone} data-name="phone" prefix={<Icon type="phone" theme="outlined" />} />
+          <Input
+            type="text"
+            value={email}
+            data-name="email"
+            onChange={this.handleInputChange}
+            prefix={<Icon type="mail" theme="outlined" />}
+          />
+          <Button type="primary" icon="check" onClick={() => this.setState({ edit: false })}>
+            Save
+          </Button>
+        </Card>
+      )
+    } else {
+      return (
+        <Card title="Volunteer">
+          {/* replace with username */}
+          <p>{firstName + ' ' + lastName}</p>
+          <p>
+            <Icon type="user" theme="outlined" /> {firstName} {lastName}
+          </p>
+          <p>
+            <Icon type="phone" theme="outlined" /> Phone # {phone}
+          </p>
+          <p>
+            <Icon type="mail" theme="outlined" /> Email {email}
+          </p>
+          <Button type="primary" icon="edit" onClick={() => this.setState({ edit: true })}>
+            Edit
+          </Button>
+        </Card>
+      )
     }
-
-    render() {
-        let { id, events, email, phone, firstName, lastName, categories}= this.props;
-        /*
-        if (this.state.editmode)
-        {
-            then do the same thing but with tex
-        }
-        */
-
-        return(
-            <Card>
-                <p>{firstName + ' ' + lastName}</p>
-                <Input type="text" value={firstName} prefix={<Icon type ="user" theme="outlined"/>}/>
-                <Input type="text" value={lastName} prefix={<Icon type="user"theme="outlined"/>}/>
-                <Input type="text" value={phone}prefix={<Icon type ="phone" theme="outlined"/>}/>
-                <Input type="text" value={email}prefix={<Icon type="mail" theme="outlined"/>}/>
-                <Button type="primary" icon="check">Save</Button>
-            </Card>
-         )
-
-        return (
-            <Card title= "Volunteer">
-                {/* replace with username */}
-                <p>{firstName + ' ' + lastName}</p>
-                <p>
-                    <Icon type="user" theme="outlined" /> {firstName} {lastName}
-                </p>
-                <p>
-                    <Icon type="phone" theme="outlined" /> {phone} Phone #
-                </p>
-                <p>
-                    <Icon type="mail" theme="outlined" /> {email} Email
-                </p>
-                <Button type="primary" icon="edit">Edit</Button>
-            </Card>
-        )
-    }
+  }
 }
 
 export default event
