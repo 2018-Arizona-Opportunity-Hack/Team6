@@ -75,12 +75,12 @@
     // If the user does not exist:
     if (!find) {
       // Create new user
-      if (!user.username) return 'Username bad'
-      if (!user.password) return 'Password bad'
-      if (!user.first_name) return 'First name bad'
-      if (!user.last_name) return 'Last name bad'
-      if (!user.phone_number) return 'Phone number bad'
-      if (!user.email) return 'Email bad'
+      if (!user.username) return 'Username bad';
+      if (!user.password) return 'Password bad';
+      if (!user.first_name) return 'First name bad';
+      if (!user.last_name) return 'Last name bad';
+      if (!user.phone_number) return 'Phone number bad';
+      if (!user.email) return 'Email bad';
 
       users[user.username] = {
         username: user.username,
@@ -90,7 +90,7 @@
         phone_number: user.phone_number,
         email: user.email,
         authorization: 1
-      }
+      };
 
       return api.constants.NEW_USER
     } else {
@@ -104,7 +104,7 @@
         phone_number: user.phone_number || curUser.phone_number,
         email: user.email || curUser.email,
         authorization: curUser.authorization
-      }
+      };
 
       if (currentLevel >= api.constants.ADMINISTRATOR && user.authorization != undefined) {
         curUser.authorization = user.authorization
@@ -114,7 +114,7 @@
 
       return api.constants.MOD_USER
     }
-  }
+  };
 
   /*
 	*/

@@ -15,11 +15,16 @@ class navBar extends Component {
           <Menu.Item key="2">
             <Link to="/events">Events</Link>
           </Menu.Item>
+            {/* Admin eyes only */}
           <Menu.Item key="3">
             <Link to="/volunteers">Volunteers</Link>
           </Menu.Item>
           <Menu.Item key="4">
             <Link to="/login">Login</Link>
+          </Menu.Item>
+            {/* Admin eyes only */}
+          <Menu.Item onclick=''>
+              Export Volunteers to .CSV
           </Menu.Item>
         </Menu>
       </Header>
