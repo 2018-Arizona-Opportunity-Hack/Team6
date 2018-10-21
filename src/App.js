@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
-import Firebase from './Firebase.js'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import homePage from './pages/homePage.js'
 import './App.css'
 import NavBar from './navBar.js'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar/>
-          
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <Switch>
+            <Route path="/home" component={homePage} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
